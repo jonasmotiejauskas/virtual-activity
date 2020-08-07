@@ -1,24 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AttendencyTracker.Domain
 {
     public class AttendanceSheet
     {
-        private readonly Dictionary<Guid, AttendanceRecord> _internalSheet;
+        private readonly List<AttendanceRecord> _internalSheet;
 
         public DateTime CalendarDate { get; }
-        public IReadOnlyDictionary<Guid, AttendanceRecord> Attendancy { get => _internalSheet; }
+        public IReadOnlyList<AttendanceRecord> Attendancy { get => _internalSheet; }
 
-        public AttendanceSheet(DateTime calendarDate, ICollection<Attendee> attendeees)
+        public AttendanceSheet(DateTime calendarDate, ICollection<Attendee> attendees)
         {
             if (calendarDate.Kind != DateTimeKind.Utc)
                 throw new ArgumentException(nameof(calendarDate));
 
             CalendarDate = calendarDate.Date;
-            _ = attendeees ?? throw new ArgumentNullException(nameof(attendeees));
+            _ = attendees ?? throw new ArgumentNullException(nameof(attendees));
 
-            _internalSheet = new Dictionary<Guid, AttendanceRecord>();
+            _internalSheet = new List<AttendanceRecord>(attendees.Select(x => new AttendanceRecord(x.Id)));
+        }
+
+        public AttendanceSheet(DateTime calendarDate, ICollection<AttendanceRecord> existingSheet)
+        {
+            if (calendarDate.Kind != DateTimeKind.Utc)
+                throw new ArgumentException(nameof(calendarDate));
+
+            CalendarDate = calendarDate.Date;
+            _ = existingSheet ?? throw new ArgumentNullException(nameof(existingSheet));
+
+            _internalSheet = existingSheet.ToList();
         }
     }
 }

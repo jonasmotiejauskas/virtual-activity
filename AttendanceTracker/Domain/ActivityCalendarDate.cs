@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AttendencyTracker.Domain
+﻿namespace AttendencyTracker.Domain
 {
     public class ActivityCalendarDate
     {

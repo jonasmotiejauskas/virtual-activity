@@ -2,9 +2,11 @@
 {
     public enum AttendanceStatus
     {
+        Unknown,
         Attending,
+        Late,
         Sick,
-        Leave,
+        Reason,
         Missing,
     }
 }
