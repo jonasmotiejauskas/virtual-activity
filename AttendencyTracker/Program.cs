@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AttendencyTracker.Domain;
+using System;
 
 namespace AttendencyTracker
 {
@@ -6,7 +7,8 @@ namespace AttendencyTracker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var someAttendee = new Attendee("Jonas", "Motiejauskas");
+            Console.WriteLine($"{someAttendee.Id.ToString()}");
         }
     }
 }
