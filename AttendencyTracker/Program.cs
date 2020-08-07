@@ -1,6 +1,6 @@
 ﻿using AttendencyTracker.Domain;
-using System;
 using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 namespace AttendencyTracker
 {
@@ -10,10 +10,10 @@ namespace AttendencyTracker
         {
             var someAttendee = new Attendee("Jonas", "Motiejauskas");
             var logger = new LoggerConfiguration()
-                .WriteTo.Console()
+                .WriteTo.Console(theme: AnsiConsoleTheme.Code)
                 .CreateLogger();
 
-            logger.Information("Attendee #1 = {@Attendee}", someAttendee);
+            logger.Debug("Attendee #1 = {@Attendee}", someAttendee);
         }
     }
 }
