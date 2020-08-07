@@ -1,5 +1,6 @@
 ﻿using AttendencyTracker.Domain;
 using System;
+using Serilog;
 
 namespace AttendencyTracker
 {
@@ -8,7 +9,11 @@ namespace AttendencyTracker
         static void Main(string[] args)
         {
             var someAttendee = new Attendee("Jonas", "Motiejauskas");
-            Console.WriteLine($"{someAttendee.Id.ToString()}");
+            var logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .CreateLogger();
+
+            logger.Information("Attendee #1 = {@Attendee}", someAttendee);
         }
     }
 }
