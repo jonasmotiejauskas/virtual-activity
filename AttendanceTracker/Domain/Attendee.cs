@@ -4,9 +4,9 @@ namespace AttendencyTracker.Domain
 {
     public class Attendee
     {
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
-        public string LastName { get; private set; }
+        public Guid Id { get; }
+        public string Name { get; }
+        public string LastName { get; }
 
         public Attendee(string id, string name, string lastName)
         {

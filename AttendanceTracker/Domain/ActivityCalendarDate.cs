@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AttendencyTracker.Domain
 {
-    public class AttendanceSheet
+    public class ActivityCalendarDate
     {
 
     }
