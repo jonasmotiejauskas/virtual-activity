@@ -2,7 +2,7 @@
 
 namespace AttendencyTracker.Domain
 {
-    public class Attendee
+    public struct Attendee
     {
         public Guid Id { get; }
         public string Name { get; }
