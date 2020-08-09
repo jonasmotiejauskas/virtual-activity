@@ -1,17 +1,18 @@
 syntax = "proto3";
 
-option csharp_namespace = "AttendanceTracker.WebService";
+package attendace_tracker.web_service.protos;
 
-package greet;
-
-service Greeter {
-  rpc SayHello (HelloRequest) returns (HelloReply);
+service AttendeeService {
+  rpc RegisterAttendee (RegisterAttendeeRequest) returns (RegisteredAttendee);
 }
 
-message HelloRequest {
+message RegisterAttendeeRequest {
   string name = 1;
+  string last_name = 2;
 }
 
-message HelloReply {
-  string message = 1;
+message RegisteredAttendee {
+  string name = 1;
+  string last_name = 2;
+  string id = 3;
 }
