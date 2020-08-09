@@ -1,6 +1,7 @@
 ﻿using AttendencyTracker.Domain;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
+using System;
 using System.Threading.Tasks;
 
 namespace AttendencyTracker
@@ -14,7 +15,11 @@ namespace AttendencyTracker
                 .WriteTo.Console(theme: AnsiConsoleTheme.Code)
                 .CreateLogger();
 
-            logger.Information("Attendee #1 = {@Attendee}", someAttendee);
+            while (true)
+            {
+                logger.Information("Attendee #1 = {@Attendee}", someAttendee);
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            }
         }
     }
 }
