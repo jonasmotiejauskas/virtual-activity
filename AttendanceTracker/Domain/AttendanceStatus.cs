@@ -1,4 +1,4 @@
-﻿namespace AttendencyTracker.Domain
+﻿namespace AttendaceTracker.Domain
 {
     public enum AttendanceStatus
     {

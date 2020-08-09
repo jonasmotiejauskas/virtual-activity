@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AttendencyTracker.Domain
+namespace AttendaceTracker.Domain
 {
     public struct AttendanceRecord
     {

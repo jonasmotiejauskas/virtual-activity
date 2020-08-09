@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AttendencyTracker.Domain
+namespace AttendaceTracker.Domain
 {
     public class AttendanceSheet
     {
