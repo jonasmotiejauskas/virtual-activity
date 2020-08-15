@@ -22,7 +22,7 @@ namespace AttendanceTracker.WebService
                     {
                         if (webHostContext.HostingEnvironment.IsDevelopment())
                         {
-                            serverOptions.Listen(IPAddress.Any, 5001, listenOptions =>
+                            serverOptions.Listen(IPAddress.Any, 80, listenOptions =>
                             {
                                 listenOptions.Protocols = HttpProtocols.Http2;
                             });
