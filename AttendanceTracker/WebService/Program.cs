@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System.Net;
 
 namespace AttendanceTracker.WebService
 {
@@ -15,6 +17,17 @@ namespace AttendanceTracker.WebService
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
+                    webBuilder.ConfigureKestrel((webHostContext, serverOptions) =>
+                    {
+                        if (webHostContext.HostingEnvironment.IsDevelopment())
+                        {
+                            serverOptions.Listen(IPAddress.Any, 5001, listenOptions =>
+                            {
+                                listenOptions.Protocols = HttpProtocols.Http2;
+                            });
+                        }
+                    });
                 });
     }
 }
