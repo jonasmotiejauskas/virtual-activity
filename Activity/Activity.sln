@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity.WebService", "WebS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity.TestClient", "TestClient\Activity.TestClient.csproj", "{EAFB2661-864D-472B-829A-DCA669328E32}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BC706ABA-AFB4-4A90-B464-4444192BEEDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EAFB2661-864D-472B-829A-DCA669328E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAFB2661-864D-472B-829A-DCA669328E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAFB2661-864D-472B-829A-DCA669328E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC706ABA-AFB4-4A90-B464-4444192BEEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC706ABA-AFB4-4A90-B464-4444192BEEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC706ABA-AFB4-4A90-B464-4444192BEEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC706ABA-AFB4-4A90-B464-4444192BEEDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

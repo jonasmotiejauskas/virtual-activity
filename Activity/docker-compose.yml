@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  webservice:
+    image: ${DOCKER_REGISTRY-}webservice
+    ports:
+     - 51333:80
+    build:
+      context: .
+      dockerfile: WebService/Dockerfile
+    container_name: web-service
+  eventstore:
+   image: eventstore/eventstore
+   environment:
+     - EVENTSTORE_DEV=true
+   ports:
+     - 1113:1113
+     - 2113:2113
+   restart: always
+   container_name: eventstore-node
