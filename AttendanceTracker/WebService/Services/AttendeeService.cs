@@ -16,7 +16,7 @@ namespace AttendanceTracker.WebService.Services
 
         public override Task<RegisteredAttendee> RegisterAttendee(RegisterAttendeeRequest request, ServerCallContext context)
         {
-            var attendeeEntity = new Attendee(request.Name, request.LastName);
+            var attendeeEntity = new User(request.Name, request.LastName);
 
             _logger.LogInformation("Created Attendee: {attendee}", attendeeEntity);
 

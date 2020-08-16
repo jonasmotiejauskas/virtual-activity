@@ -11,7 +11,7 @@ namespace AttendaceTracker.Domain
         public DateTime CalendarDate { get; }
         public IReadOnlyList<AttendanceRecord> Attendancy { get => _internalSheet; }
 
-        public AttendanceSheet(DateTime calendarDate, ICollection<Attendee> attendees)
+        public AttendanceSheet(DateTime calendarDate, ICollection<User> attendees)
         {
             if (calendarDate.Kind != DateTimeKind.Utc)
                 throw new ArgumentException(nameof(calendarDate));
@@ -19,7 +19,7 @@ namespace AttendaceTracker.Domain
             CalendarDate = calendarDate.Date;
             _ = attendees ?? throw new ArgumentNullException(nameof(attendees));
 
-            _internalSheet = new List<AttendanceRecord>(attendees.Select(x => new AttendanceRecord(x.Id)));
+            _internalSheet = new List<AttendanceRecord>(attendees.Select(x => new AttendanceRecord(x)));
         }
 
         public AttendanceSheet(DateTime calendarDate, ICollection<AttendanceRecord> existingSheet)

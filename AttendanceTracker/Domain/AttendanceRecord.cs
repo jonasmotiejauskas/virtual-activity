@@ -4,12 +4,12 @@ namespace AttendaceTracker.Domain
 {
     public struct AttendanceRecord
     {
-        public Guid Attendee { get; }
+        public User Attendee { get; }
         public AttendanceStatus Status { get; }
         public string Comment { get; }
 
         public AttendanceRecord(
-            Guid attendee,
+            User attendee,
             AttendanceStatus status = default, 
             string comment = default)
         {
