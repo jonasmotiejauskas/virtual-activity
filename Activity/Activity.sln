@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{37387D5F-3DB4-4D35-888C-1D39C6F9ED10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity.Domain", "Domain\Activity.Domain.csproj", "{37387D5F-3DB4-4D35-888C-1D39C6F9ED10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService", "WebService\WebService.csproj", "{A4760757-B335-4C49-A8D5-6717638E79F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity.WebService", "WebService\Activity.WebService.csproj", "{A4760757-B335-4C49-A8D5-6717638E79F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClient", "TestClient\TestClient.csproj", "{EAFB2661-864D-472B-829A-DCA669328E32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity.TestClient", "TestClient\Activity.TestClient.csproj", "{EAFB2661-864D-472B-829A-DCA669328E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
